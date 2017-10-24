@@ -1,5 +1,30 @@
+<!--
+
 <layout-header></layout-header>
 
 <router-outlet></router-outlet>
 
 <layout-footer></layout-footer>
+
+-->
+
+<!-- Wrapper-->
+<div id="wrapper">
+
+	<!-- Navigation -->
+	<layout-navigation></layout-navigation>
+
+	<!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg">
+
+    	<layout-topnavbar></layout-topnavbar>
+
+    	<router-outlet></router-outlet>
+
+    	<layout-footer></layout-footer>
+
+    </div>
+    <!-- End page wrapper-->
+
+</div>

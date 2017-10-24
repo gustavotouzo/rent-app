@@ -9,6 +9,10 @@ import { EditorModule } from './editor/editor.module';
 import { HomeModule } from './home/home.module';
 import { ProfileModule } from './profile/profile.module';
 import { SettingsModule } from './settings/settings.module';
+import { DirectiveModule } from './directives/directive.module';
+import { ComponentsModule } from './components/components.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+
 import {
   ApiService,
   ArticlesService,
@@ -16,9 +20,13 @@ import {
   CommentsService,
   FooterComponent,
   HeaderComponent,
+
+  NavigationComponent,
+  TopNavBarComponent,
+
   JwtService,
   ProfilesService,
-  SharedModule,
+  SharedModule,  
   TagsService,
   UserService
 } from './shared';
@@ -29,7 +37,10 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+
+    NavigationComponent,
+    TopNavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +48,12 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     AuthModule,
     EditorModule,
     HomeModule,
+    DashboardModule,
     ProfileModule,
     rootRouting,
     SharedModule,
+    DirectiveModule,
+    ComponentsModule,
     SettingsModule
   ],
   providers: [

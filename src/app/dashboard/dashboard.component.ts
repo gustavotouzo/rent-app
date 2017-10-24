@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 import { ArticleListConfig, TagsService, UserService } from '../shared';
 
 @Component({
-  selector: 'home-page',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'dashboard',
+  templateUrl: './dashboard.component.html'
 })
-export class HomeComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   constructor(
     private router: Router,
     private tagsService: TagsService,
@@ -19,7 +18,6 @@ export class HomeComponent implements OnInit {
   listConfig: ArticleListConfig = new ArticleListConfig();
   tags: Array<string> = [];
   tagsLoaded = false;
-  possuiTags = false;
 
   ngOnInit() {
     this.userService.isAuthenticated.subscribe(
@@ -39,7 +37,6 @@ export class HomeComponent implements OnInit {
     .subscribe(tags => {
       this.tags = tags;
       this.tagsLoaded = true;
-      this.possuiTags = tags.length > 0;
     });
   }
 
