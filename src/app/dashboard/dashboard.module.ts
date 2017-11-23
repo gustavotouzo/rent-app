@@ -7,7 +7,7 @@ import { SharedModule } from '../shared';
 
 const dashboardRouting: ModuleWithProviders = RouterModule.forChild([
   {
-    path: 'dashboard',
+    path: '',
     component: DashboardComponent,
     resolve: {
       isAuthenticated: DashboardResolver

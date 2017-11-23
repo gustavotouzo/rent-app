@@ -9,13 +9,10 @@
 -->
 
 <!-- Wrapper-->
-<div id="wrapper">
+<!--<div id="wrapper">
 
-	<!-- Navigation -->
 	<layout-navigation></layout-navigation>
-
-	<!-- Page wraper -->
-    <!-- ng-class with current state name give you the ability to extended customization your view -->
+	
     <div id="page-wrapper" class="gray-bg">
 
     	<layout-topnavbar></layout-topnavbar>
@@ -24,7 +21,25 @@
 
     	<layout-footer></layout-footer>
 
-    </div>
-    <!-- End page wrapper-->
+    </div>    
+
+</div>-->
+
+<!-- begin #page-loader -->
+<div id="page-loader" class="fade in"><span class="spinner"></span></div>
+
+<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+
+    <layout-topnavbar></layout-topnavbar>
+
+    <layout-navigation></layout-navigation>
+
+    <router-outlet></router-outlet>
+
+    <layout-footer></layout-footer>
+
+    <!-- begin scroll to top btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+    <!-- end scroll to top btn -->
 
 </div>
