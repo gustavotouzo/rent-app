@@ -1,0 +1,49 @@
+ -- Chamada mongod
+ mongod --dbpath=/MongoData
+ 
+ 
+ ============== Desenvolvimento ================
+ 
+ api-app = Desenvolvimento do back-end em node da aplicação;
+ 
+ rent-app = Desenvolvimento do front-end da aplicação rent;
+ 
+ -- Rent app
+
+Contratos - Lista de contratos - ordenados pela data de vencimento 
+Entradas - Quanto tem para entrar em que dia
+Devedores - relação dos atrasos - Detalhando depois quem está devendo, quando venceu, quanto falta pagar
+Modulo de pagamento de aluguel - permitir que não se pague a totalidade, permitir que adicione juros ao valor
+modulo de cadastro de casas e imobiliarias e contrato de aluguel
+vencimentos dos alugueis
+reajuste do aluguel
+fiador
+depósito
+fotos da vistoria
+upload do contrato
+ 
+ ============ GIT ===============
+
+---- 
+$ git add <file>
+$ git add README
+$ git commit -m 'Initial project version'
+ 
+----
+# Adding a file
+$ git add filename
+
+# Adding all files
+$ git add -A
+
+# Adding all files changes in a directory
+$ git add .
+
+# Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
+$ git add -p
+
+
+----
+$ git status
+
+
